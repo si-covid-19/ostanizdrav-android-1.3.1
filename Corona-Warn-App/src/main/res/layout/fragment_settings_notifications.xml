@@ -78,7 +78,7 @@
                     layout="@layout/include_settings_switch_row"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:visibility="@{FormatterHelper.formatVisibility(settingsViewModel.isNotificationsEnabled())}"
+                    android:visibility="gone"
                     app:enabled="@{true}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
