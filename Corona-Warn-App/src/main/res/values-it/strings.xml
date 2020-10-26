@@ -12,6 +12,8 @@
     <!-- NOTR -->
     <string name="preference_onboarding_completed_timestamp"><xliff:g id="preference">"preference_onboarding_completed_timestamp"</xliff:g></string>
     <!-- NOTR -->
+    <string name="preference_background_check_done"><xliff:g id="preference">"preference_background_check_done"</xliff:g></string>
+    <!-- NOTR -->
     <string name="preference_reset_app"><xliff:g id="preference">"preference_reset_app"</xliff:g></string>
     <!-- NOTR -->
     <string name="preference_only_wifi"><xliff:g id="preference">"preference_only_wifi"</xliff:g></string>
@@ -136,14 +138,16 @@
     <!-- XTXT: risk card - number of contacts for one or more -->
     <plurals name="risk_card_body_contact_value">
         <item quantity="one">"%1$s esposizione a una persona infetta"</item>
-        <item quantity="two">"%1$s di esposizione a una persona infetta""</item>
-        <item quantity="few">"%1$s di esposizione a una persona infetta"</item>
         <item quantity="other">"%1$s di esposizione a una persona infetta"</item>
+    </plurals>
+    <plurals name="risk_card_body_contact_value_high_risk">
+        <item quantity="one">"%1$s exposure"</item>
+        <item quantity="other">"%1$s exposures"</item>
     </plurals>
     <!-- XTXT: risk card - tracing active for x out of 14 days -->
     <string name="risk_card_body_saved_days">"Attivato %1$s da 14 giorni"</string>
     <!-- XTXT: risk card- tracing active for 14 out of 14 days -->
-    <string name="risk_card_body_saved_days_full">La registrazione dell\'esposizione è attiva</string>
+    <string name="risk_card_body_saved_days_full">"La registrazione dell\'esposizione è attiva"</string>
     <!-- XTXT; risk card - no update done yet -->
     <string name="risk_card_body_not_yet_fetched">"I contatti non sono stati ancora aggiornati."</string>
     <!-- XTXT: risk card - last successful update -->
@@ -165,8 +169,6 @@
     <!-- XTXT: risk card - increased risk days since last contact -->
     <plurals name="risk_card_increased_risk_body_contact_last">
         <item quantity="one">"%1$s giorno dall\'ultima esposizione a una persona infetta"</item>
-        <item quantity="two">"%1$s giorni dall\'ultima esposizione a una persona infetta"</item>
-        <item quantity="few">"%1$s giorni dall\'ultima esposizione a una persona infetta"</item>
         <item quantity="other">"%1$s giorni dall\'ultima esposizione a una persona infetta"</item>
     </plurals>
     <!-- XHED: risk card - unknown risk headline -->
@@ -181,6 +183,8 @@
     <string name="risk_card_outdated_risk_headline">"La registrazione dell\'esposizione non è possibile."</string>
     <!-- XTXT: risk card - outdated risk, calculation couldn't be updated in the last 24 hours -->
     <string name="risk_card_outdated_risk_body">"Non siamo stati in grado di aggiornare la registrazione dell\'esposizione per più di 24 ore."</string>
+    <!-- XTXT: risk card - outdated risk manual, calculation couldn't be updated in the last 48 hours -->
+    <string name="risk_card_outdated_manual_risk_body">"Your risk status has not been updated for more than 48 hours. Please update your risk status."</string>
     <!-- XHED: risk card - loading headline, update is ongoing -->
     <string name="risk_card_loading_headline">"Verifica in corso …"</string>
     <!-- XTXT: risk card - loading, data is downloaded and will be checked, this can take several minutes -->
@@ -195,7 +199,7 @@
     <!-- XTXT: main, explains faq on card -->
     <string name="main_about_body">"Qui puoi trovare informazioni sull'app #OstaniZdrav. Ti reindirizzeremo a un sito web esterno"</string>
     <!-- XTXT: FAQ link, should be translated  -->
-    <string name="main_about_link">"https://www.gov.si/it/argomenti/sars-cov-2/app-mobile-ostanizdrav/"</string>
+    <string name="main_about_link">"https://www.gov.si/it/argomenti/sars-cov-2/mobilna-aplikacija-ostanizdrav/"</string>
     <!-- XACT: Opens external webpage -->
     <string name="hint_external_webpage">"Qui puoi trovare informazioni sull'app #OstaniZdrav. Ti reindirizzeremo a un sito web esterno."</string>
 
@@ -206,13 +210,13 @@
     <!-- XHED: Share app link page title -->
     <string name="main_share_title">"Condividi l'app #OstaniZdrav"</string>
     <!-- XHED: Share app link page subtitle -->
-    <string name="main_share_headline">"Proteggiamo noi stessi e gli altri dal Covid-19."</string>
+    <string name="main_share_headline">Proteggiamo noi stessi e gli altri dal Covid-19</string>
     <!-- YTXT: Share app link page body -->
     <string name="main_share_body">"Più persone usano l'app, più velocemente spezzeremo le catene di trasmissione delle infezioni. Invita i tuoi parenti e amici a installare l'app."</string>
     <!-- XBUT: Share app link page button -->
     <string name="main_share_button">"Invia il link per scaricare l'app."</string>
     <!-- YMSG: Message when sharing is executed -->
-    <string name="main_share_message">"Insieme contro il COVID-19<xliff:g id="line_break">"\n"</xliff:g>"Io collaboro, e tu?"<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="link_play_store">"https://www.gov.si/it/argomenti/sars-cov-2/app-mobile-ostanizdrav/"</xliff:g>"\n"<xliff:g id="line_break">"\n"</xliff:g></string>
+    <string name="main_share_message">"Insieme contro il COVID-19<xliff:g id="line_break">"\n"</xliff:g>"Io collaboro, e tu?"<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="link_play_store">"https://www.gov.si/it/argomenti/sars-cov-2/mobilna-aplikacija-ostanizdrav/"</xliff:g>"\n"<xliff:g id="line_break">"\n"</xliff:g></string>
     <!-- XACT: main (share) - illustraction description, explanation image -->
     <string name="main_share_illustration_description">"Un signore condivide l'app #OstaniZdrav con altre quattro persone."</string>
 
@@ -249,7 +253,7 @@
     <!-- XHED: App overview subtitle for glossary key storage -->
     <string name="main_overview_subtitle_glossary_tracing">"Registro dell\'esposizione"</string>
     <!-- YTXT: App overview body for glossary key storage -->
-    <string name="main_overview_body_glossary_tracing">"Elenco dei codici di trasmissione casuale temporanea ricevuti e inviati, temporaneamente memorizzati nella memoria del sistema operativo. Questo elenco deve essere letto durante il controllo dell\'esposizione. Tutti i codici di trasmissione casuali vengono eliminati automaticamente dopo 14 giorni."</string>
+    <string name="main_overview_body_glossary_tracing">"Elenco dei codici di trasmissione casuale ricevuti, temporaneamente memorizzati nella memoria del sistema operativo. Questo elenco deve essere letto durante il controllo dell\'esposizione. Tutti i codici di trasmissione casuali vengono eliminati automaticamente dopo 14 giorni."</string>
     <!-- XHED: App overview subtitle for glossary risk calculation  -->
     <string name="main_overview_subtitle_glossary_calculation">"Verifica dell\'esposizione"</string>
     <!-- YTXT: App overview body for glossary risk calculation -->
@@ -284,13 +288,13 @@
     <!-- XMSG: risk details - go/stay home, something like a bullet point -->
     <string name="risk_details_behavior_body_stay_home">"Evitare il contatto non necessario con altre persone, in particolare con persone a maggior rischio di un decorso più grave della malattia, come gli anziani e i malati cronici. Negli spazi chiusi, dove non è possibile mantenere una distanza interpersonale sufficiente, si consiglia l'uso della mascherina."</string>
     <!-- XMSG: risk details - get in touch with the corresponding people, something like a bullet point -->
-    <string name="risk_details_behavior_body_contact_doctor">"<b> Monitora il tuo stato di salute</b>. Se compare uno di questi sintomi o segni, rimanere a casa e contattare il medico di base o il medico di guardia:"</string>
+    <string name="risk_details_behavior_body_contact_doctor">Monitora il tuo stato di salute. Se compare uno di questi sintomi o segni, rimanere a casa e contattare il medico di base o il medico di guardia:</string>
     <!-- XMSG: risk details - wash your hands, something like a bullet point -->
     <string name="risk_details_behavior_body_wash_hands">"Lavarsi le mani regolarmente e accuratamente con acqua e sapone. Se il sapone e l'acqua non sono disponibili, disinfettate le mani. Non toccare gli occhi, il naso e la bocca con mani non lavate o non disinfettate."</string>
     <!-- XMSG: risk details - wear a face mask, something like a bullet point -->
     <string name="risk_details_behavior_body_wear_mask">"Negli spazi chiusi, dove non è possibile mantenere una distanza interpersonale sufficiente, si consiglia l'uso della mascherina. Ventilare i locali regolarmente."</string>
     <!-- XMSG: risk details - stay 1,5 away, something like a bullet point -->
-    <string name="risk_details_behavior_body_stay_away">"Mantenere una distanza interpersonale di almeno 1,5 metri."</string>
+    <string name="risk_details_behavior_body_stay_away">"Mantenere una distanza interpersonale di almeno 1,5 metri. Negli spazi chiusi, dove non è possibile mantenere una distanza interpersonale sufficiente, si consiglia l'uso della mascherina. Ventilare i locali regolarmente."</string>
     <!-- XMSG: risk details - cough/sneeze, something like a bullet point -->
     <string name="risk_details_behavior_body_cough_sneeze">"Prima di tossire o starnutire, coprire la bocca e il naso con un tovagliolo di carta o tossire o starnutire sulla parte superiore della manica."</string>
     <!-- XMSG: risk details - contact your doctor, bullet point -->
@@ -322,12 +326,14 @@
     <!-- YTXT: risk details - increased risk explanation text with variable for day(s) since last contact -->
     <plurals name="risk_details_information_body_increased_risk">
         <item quantity="one">"Il tuo rischio di infezione è elevato perché l'ultima volta sei stato esposto %1$ giorni fa, per un periodo di tempo lungo e in prossimità di almeno una persona affetta da SARS-CoV-2."</item>
-        <item quantity="two">"Il tuo rischio di infezione è elevato perché l'ultima volta sei stato esposto %1$ giorni fa, per un periodo di tempo lungo e in prossimità di almeno una persona affetta da SARS-CoV-2."</item>
         <item quantity="other">"Il tuo rischio di infezione è elevato perché l'ultima volta sei stato esposto %1$ giorni fa, per un periodo di tempo lungo e in prossimità di almeno una persona affetta da SARS-CoV-2."</item>
-        <item quantity="few">"Il tuo rischio di infezione è elevato perché l'ultima volta sei stato esposto %1$ giorni fa, per un periodo di tempo lungo e in prossimità di almeno una persona affetta da SARS-CoV-2."</item>
     </plurals>
     <!-- YTXT: risk details - risk calculation explanation -->
     <string name="risk_details_information_body_notice">"Abbiamo valutato il rischio di infezione localmente sul tuo dispositivo in base ai dati di registrazione dell\'esposizione (durata e prossimità). Il dato sul rischio di infezione non può essere visto da nessun altro, né può essere trasmesso a nessuno."</string>
+    <!-- YTXT: risk details - risk calculation explanation for low risk -->
+    <string name="risk_details_information_body_notice_low">"Therefore, your risk of infection has been ranked as low. Your risk of infection is calculated from the exposure logging data (duration and proximity) locally on your device. Your risk of infection cannot be seen by, or passed on to, anyone else."</string>
+    <!-- YTXT: risk details - risk calculation explanation for increased risk -->
+    <string name="risk_details_information_body_notice_increased">"Therefore, your risk of infection has been ranked as increased. Your risk of infection is calculated from the exposure logging data (duration and proximity) locally on your device. Your risk of infection cannot be seen by, or passed on to, anyone else. When you get home, please also avoid close contact with members of your family or household."</string>
     <!-- NOTR -->
     <string name="risk_details_button_update">@string/risk_card_button_update</string>
     <!-- NOTR -->
@@ -399,8 +405,36 @@
     <string name="onboarding_tracing_dialog_button_positive">"Non attivare"</string>
     <!-- XBUT: onboarding(tracing) - negative button (right) -->
     <string name="onboarding_tracing_dialog_button_negative">"Indietro"</string>
+    <!-- XACT: onboarding(tracing) - dialog about background jobs header text -->
+    <string name="onboarding_background_fetch_dialog_headline">"Background updates deactivated"</string>
+    <!-- YMSI: onboarding(tracing) - dialog about background jobs -->
+    <string name="onboarding_background_fetch_dialog_body">"You have deactivated background updates for the #OstaniZdrav App. Please activate background updates to use automatic exposure logging. If you do not activate background updates, you can only start exposure logging manually in the app. You can activate background updates for the app in your device settings."</string>
+    <!-- XBUT: onboarding(tracing) - dialog about background jobs, open device settings -->
+    <string name="onboarding_background_fetch_dialog_button_positive">"Open Device Settings"</string>
+    <!-- XBUT: onboarding(tracing) - dialog about background jobs, continue in app -->
+    <string name="onboarding_background_fetch_dialog_button_negative">"Start Exposure Logging Manually"</string>
+    <!-- XACT: onboarding(tracing) - dialog about energy optimized header text -->
+    <string name="onboarding_energy_optimized_dialog_headline">"Allow prioritized background activity"</string>
+    <!-- YMSI: onboarding(tracing) - dialog about energy optimized -->
+    <string name="onboarding_energy_optimized_dialog_body">"Enable prioritized background activity to allow the App to determine your risk status in the background any time (recommended). This disables battery life optimization for the #OstaniZdrav App only. We do not expect this to cause a significant decrease in your device\'s battery life.\n\nIf you do not allow this setting, we recommend you to open the App manually at least once every 24 hours."</string>
+    <!-- XBUT: onboarding(tracing) - dialog about energy optimized, open device settings -->
+    <string name="onboarding_energy_optimized_dialog_button_positive">"Allow"</string>
+    <!-- XBUT: onboarding(tracing) - dialog about energy optimized, continue in app -->
+    <string name="onboarding_energy_optimized_dialog_button_negative">"Do Not Allow"</string>
+    <!-- XACT: onboarding(tracing) - dialog about manual checking header text -->
+    <string name="onboarding_manual_required_dialog_headline">"Prioritized background activity disabled"</string>
+    <!-- YMSI: onboarding(tracing) - dialog about manual checking -->
+    <string name="onboarding_manual_required_dialog_body">"Please note that with prioritized background activity disabled, you have to open the App manually at least once every 24 hours to update your risk status.\n\nYou can enable prioritized background activity in your settings any time."</string>
+    <!-- XBUT: onboarding(tracing) - dialog about manual checking button -->
+    <string name="onboarding_manual_required_dialog_button">"OK"</string>
     <!-- XACT: onboarding(tracing) - illustraction description, header image -->
     <string name="onboarding_tracing_illustration_description">"Tre persone hanno attivato la registrazione dell\'esposizione sui propri dispositivi per registrare i contatti tra loro."</string>
+    <!-- XHED: onboarding(tracing) - location explanation for bluetooth headline -->
+    <string name="onboarding_tracing_location_headline">Enable location access</string>
+    <!-- XTXT: onboarding(tracing) - location explanation for bluetooth body text -->
+    <string name="onboarding_tracing_location_body">Your location services are disabled. In order for the App to function properly, Google and/or Android require location services to use the Bluetooth.</string>
+    <!-- XBUT: onboarding(tracing) - button enable tracing -->
+    <string name="onboarding_tracing_location_button">"Open Device Settings"</string>
     <!-- XACT: Onboarding (test) page title -->
     <string name="onboarding_test_accessibility_title">"Schermata principale, pagina 4 di 5: se ti è stata diagnosticata un'infezione da SARS-CoV-2..."</string>
     <!-- XHED: onboarding(test) - about positive tests -->
@@ -461,6 +495,12 @@
     <!-- XBUT: settings(tracing) - go to operating system settings button on card -->
     <string name="settings_tracing_status_bluetooth_button">"Apri le impostazioni del dispositivo"</string>
     <!--XHED : settings(tracing) - headline on card about the current status and what to do -->
+    <string name="settings_tracing_status_location_headline">"Allow location access"</string>
+    <!-- XTXT: settings(tracing) - explains user what to do on card if location is disabled -->
+    <string name="settings_tracing_status_location_body">"Your location cannot be accessed. Google and/or Android requires access to your device\'s location to use Bluetooth."</string>
+    <!-- XBUT: settings(tracing) - go to operating system settings button on card - location -->
+    <string name="settings_tracing_status_location_button">"Open Device Settings"</string>
+    <!--XHED : settings(tracing) - headline on card about the current status and what to do -->
     <string name="settings_tracing_status_connection_headline">"Apri i link"</string>
     <!-- XTXT: settings(tracing) - explains user what to do on card if connection is disabled -->
     <string name="settings_tracing_status_connection_body">"Per stimare l'esposizione durante la registrazione è necessaria una connessione Internet. Attiva i dati wireless o la trasmissione di dati del cellulare nelle impostazioni del dispositivo."</string>
@@ -469,14 +509,14 @@
     <!-- XTXT: settings(tracing) - explains the circle progress indicator to the right with the current value -->
     <plurals name="settings_tracing_status_body_active">
         <item quantity="one">"La registrazione dell\'esposizione è attiva da %$s giorni.\nLa verifica dell\'esposizione può essere affidabile solo se la registrazione è attivata in modo permanente."</item>
-        <item quantity="two">"La registrazione dell\'esposizione è attiva da %$s giorni.\nLa verifica dell\'esposizione può essere affidabile solo se la registrazione è attivata in modo permanente."</item>
-        <item quantity="few">"La registrazione dell\'esposizione è attiva da %$s giorni.\nLa verifica dell\'esposizione può essere affidabile solo se la registrazione è attivata in modo permanente."</item>
         <item quantity="other">"La registrazione dell\'esposizione è attiva da %$s giorni. \nLa verifica dell\'esposizione può essere affidabile solo se la registrazione è attivata in modo permanente."</item>
     </plurals>
     <!-- XACT: settings(tracing) - describes illustration -->
     <string name="settings_tracing_illustration_description_active">"Tre persone hanno attivato la registrazione dell\'esposizione sui propri dispositivi per registrare i contatti tra loro."</string>
     <!-- XACT: settings(tracing) - describes illustration -->
     <string name="settings_tracing_illustration_description_inactive">"Una persona ha disattivato la registrazione dell\'esposizione sul proprio dispositivo in modo da non registrare il contatto con altre due persone."</string>
+    <!-- XACT: settings(tracing) - describes illustration -->
+    <string name="settings_tracing_location_illustration_description_inactive"/>
     <!-- XACT: settings(tracing) - describes illustration -->
     <string name="settings_tracing_bluetooth_illustration_description_inactive">"Una persona ha disattivato il Bluetooth sul proprio dispositivo, quindi il contatto con altre due persone non è stato registrato."</string>
     <!-- XACT: settings(tracing) - describes illustration -->
@@ -491,7 +531,6 @@
     <!-- XTXT: settings(notification) - text in row on settings overview -->
     <string name="settings_notifications_body_description">"Consenti notifiche automatiche dello stato di rischio di infezione da SARS-CoV-2."</string>
     <!-- YTXT: settings(notification) - description text when it notifications are enabled -->
-    <string name="settings_notifications_body_active">"Indica per quali aree desideri ricevere notifiche."</string>
     <!-- XTXT: settings(notification) - explains what the user has to do to activate settings -->
     <string name="settings_notifications_body_inactive">"Per attivare le notifiche è necessario consentirle per l'applicazione #OstaniZdrav nelle impostazioni del dispositivo."</string>
     <!-- XHED: settings(notification) - card headline -->
@@ -543,7 +582,7 @@
     <!-- YTXT: settings(background priority) - description text -->
     <string name="settings_background_priority_body">"Per garantire il corretto funzionamento dell\'applicazione #OstaniZdrav in background disabilita il risparmio energetico nelle impostazioni per #OstaniZdrav. Ciò consentirà all'app di valutare il rischio di infezione in qualsiasi momento."</string>
     <!-- XACT: settings(background priority) - illustraction description -->
-    <string name="settings_background_priority_illustration_description">@string/lorem_ipsum</string>
+    <string name="settings_background_priority_illustration_description"/>
     <!-- XTXT: settings(background priority) - explains user what to do on card if background priority is enabled -->
     <string name="settings_background_priority_card_body">"È possibile disattivare #OstaniZdrav in background nelle impostazioni del telefono."</string>
     <!-- XBUT: settings(background priority) - go to operating system settings button on card -->
@@ -598,7 +637,7 @@
     <!-- XTXT: Body text for technical contact and hotline information page -->
     <string name="information_contact_body_phone">"Il nostro Centro unico di contatto per l'assistenza utenti è a disposizione per aiutarti"</string>
     <!-- YTXT: Body text for technical contact and hotline information page -->
-    <string name="information_contact_body_open">"Lingue: \nsloveno e inglese\nOrario di lavoro:"<xliff:g id="line_break">"\n"</xliff:g>"Dal lunedì alla domenica: dalle 08:00 alle 20:00"<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\nLa chiamata è gratuita.\nChiamate dall'estero: +386 1 478 7557"</xliff:g></string>
+    <string name="information_contact_body_open">"Lingue: sloveno e inglese\nOrario di lavoro:"<xliff:g id="line_break">"\n"</xliff:g>"Dal lunedì alla domenica: dalle 08:00 alle 20:00"<xliff:g id="line_break">"\n"</xliff:g><xliff:g id="line_break">"\nLa chiamata è gratuita.\nChiamate dall'estero: +386 1 478 7557"</xliff:g></string>
     <!-- YTXT: Body text for technical contact and hotline information page -->
     <string name="information_contact_body_other">"Informazioni generali sul Covid-19 sono disponibili sul sito web dell\'Istituto nazionale per la salute pubblica e del Ministero della salute""</string>
     <!-- XACT: describes illustration -->
@@ -669,9 +708,8 @@
 
     <!-- Permission Rationale Dialog -->
     <!-- XHED: Dialog headline QR Scan permission rationale  -->
-    <string name="submission_qr_code_scan_permission_rationale_dialog_headline">"Per l'uso della fotocamera è richiesta l'autorizzazione."</string>
     <!-- YTXT: Dialog Body text for QR Scan permission rationale -->
-    <string name="submission_qr_code_scan_permission_rationale_dialog_body">"Consenti all'app di utilizzare la fotocamera per scansionare il codice QR."</string>
+    <string name="submission_qr_code_scan_permission_rationale_dialog_body">" "</string>
     <!-- XBUT: Dialog(QR Scan permission rationale) - positive button (right) -->
     <string name="submission_qr_code_scan_permission_rationale_dialog_button_positive">"Consenti"</string>
     <!-- XBUT: Dialog(QR Scan permission rationale) - negative button (left) -->
@@ -679,26 +717,21 @@
 
     <!-- Permission Denied Dialog -->
     <!-- XHED: Dialog headline QR Scan permission denied  -->
-    <string name="submission_qr_code_scan_permission_denied_dialog_headline">"Occorre l'accesso alla fotocamera."</string>
+    <string name="submission_qr_code_scan_permission_denied_dialog_headline">" "</string>
     <!-- YTXT: Dialog Body text for QR Scan permission denied -->
-    <string name="submission_qr_code_scan_permission_denied_dialog_body">"Richiama le impostazioni di sistema e consenti all'applicazione di utilizzare la fotocamera per scansionare il codice QR."</string>
     <!-- XBUT: Dialog(QR Scan permission denied) - button -->
     <string name="submission_qr_code_scan_permission_denied_dialog_button">"OK"</string>
 
     <!-- QR Code Scan Invalid Dialog -->
     <!-- XHED: Dialog headline for invalid QR code  -->
-    <string name="submission_qr_code_scan_invalid_dialog_headline">"Codice QR non valido."</string>
     <!-- YTXT: Dialog Body text for invalid QR code -->
-    <string name="submission_qr_code_scan_invalid_dialog_body">"Codice QR non corretto. Riprova."</string>
     <!-- XBUT: Dialog(Invalid QR code) - positive button (right) -->
     <string name="submission_qr_code_scan_invalid_dialog_button_positive">"Riprova"</string>
     <!-- XBUT: Dialog(Invalid QR code) - negative button (left) -->
     <string name="submission_qr_code_scan_invalid_dialog_button_negative">"Annulla"</string>
 
     <!-- QR Code Scan Screen -->
-    <string name="submission_qr_code_scan_title">"Inserisci il codice QR nella casella."</string>
     <!-- YTXT: instruction text for QR code scanning  -->
-    <string name="submission_qr_code_scan_body">"Inserisci il codice QR nella casella."</string>
 
     <!-- Submission Test Result -->
     <!-- XHED: Page headline for test result  -->
@@ -710,19 +743,13 @@
     <!-- YTXT: Body text for for results next steps  -->
     <string name="submission_test_result_steps_added_body">"Il risultato del tuo test è confermato."</string>
     <!-- XHED: Page headline for pending test result next steps  -->
-    <string name="submission_test_result_pending_steps_waiting_heading">"Il risultato del test non è ancora disponibile."</string>
     <!-- YTXT: Body text for next steps section of waiting test result page -->
-    <string name="submission_test_result_pending_steps_waiting_body">"Il risultato del test non è ancora disponibile."</string>
     <!-- XBUT: test result pending : refresh button -->
     <string name="submission_test_result_pending_refresh_button">"Aggiornamento"</string>
     <!-- XBUT: test result pending : remove the test button -->
-    <string name="submission_test_result_pending_remove_test_button">"Elimina il test"</string>
     <!-- XHED: Page headline for negative test result next steps  -->
-    <string name="submission_test_result_negative_steps_negative_heading">"Il risultato del tuo test"</string>
     <!-- YTXT: Body text for next steps section of test negative result -->
-    <string name="submission_test_result_negative_steps_negative_body">"I risultati del laboratorio non hanno confermato che sei infettato dal coronavirus SARS-CoV-2.\n\nElimina il test dall'applicazione #OstaniZdrav in modo da poter salvare il nuovo codice di test, se necessario."</string>
     <!-- XBUT: negative test result : remove the test button -->
-    <string name="submission_test_result_negative_remove_test_button">"Elimina il test"</string>
     <!-- XHED: Page headline for positive test result screen  -->
     <string name="submission_test_result_positive_steps_positive_heading">"Notifica agli altri"</string>
     <!-- YTXT: Body text for next steps section of test positive result-->
@@ -794,15 +821,11 @@
     <!-- XHED: Page headline for dispatcher menu  -->
     <string name="submission_dispatcher_headline">"Scelta"</string>
     <!-- XHED: Page subheadline for dispatcher menu  -->
-    <string name="submission_dispatcher_subheadline">""</string>
     <!-- YTXT: Dispatcher text for QR code option -->
-    <string name="submission_dispatcher_card_qr">"Documenta con il codice QR"</string>
     <!-- YTXT: Body text for QR code dispatcher option -->
-    <string name="submission_dispatcher_qr_card_text">"Registra il test eseguendo la scansione del codice QR sul documento con il tuo test."</string>
     <!-- XHED: Dialog headline for dispatcher QR prviacy dialog  -->
     <string name="submission_dispatcher_qr_privacy_dialog_headline">"Dichiarazione di consenso"</string>
     <!-- YTXT: Dialog Body text for dispatcher QR privacy dialog -->
-    <string name="submission_dispatcher_qr_privacy_dialog_body">"Facendo clic su "Accetta" invierai il tuo consenso per consentire all'applicazione di eseguire un’indagine sullo stato del test del coronavirus e visualizzarlo nell'applicazione. Questa funzione è disponibile se hai ricevuto un codice QR e hai dato il consenso per consentire il caricamento del risultato del test sul sistema del server dell\'applicazione. Non appena il laboratorio che esegue il test memorizza il risultato del test sul server sarai in grado di vedere il risultato nell'app. Se hai abilitato le notifiche riceverai anche una notifica all'esterno dell\'app che ti informa che hai ricevuto il risultato del test. Tuttavia, per motivi di privacy, il risultato del test stesso non verrà visualizzato nell'applicazione. È possibile revocare il consenso in qualsiasi momento eliminando la registrazione del test nella domanda. La revoca non pregiudica la liceità del trattamento che ha avuto luogo prima della revoca. Ulteriori informazioni sono disponibili nel menu "Informazioni sulla privacy dei dati""</string>
     <!-- XBUT: submission(dispatcher QR Dialog) - positive button (right) -->
     <string name="submission_dispatcher_qr_privacy_dialog_button_positive">"Accetta"</string>
     <!-- XBUT: submission(dispatcher QR Dialog) - negative button (left) -->
@@ -812,11 +835,8 @@
     <!-- YTXT: Body text for TAN code dispatcher option -->
     <string name="submission_dispatcher_tan_code_card_text">"Condividi l'infezione da SARS-CoV-2 inserendo il numero TAN nell'applicazione."</string>
     <!-- YTXT: Dispatcher text for TELE-TAN option -->
-    <string name="submission_dispatcher_card_tan_tele">"Zahtevajte številko TAN"</string>
     <!-- YTXT: Body text for TELE_TAN dispatcher option -->
-    <string name="submission_dispatcher_tan_tele_card_text">"Pokličite nas, če je bila pri vas potrjena okužba s SARS-CoV-2."</string>
     <!-- XACT: Dispatcher Tan page title -->
-    <string name="submission_dispatcher_accessibility_title">"Quali informazioni hai?"</string>
 
     <!-- Submission Positive Other Warning -->
     <!-- XHED: Page title for the positive result additional warning page-->
@@ -860,17 +880,13 @@
 
     <!-- Submission Contact -->
     <!-- XHED: Page title for contact page in submission flow -->
-    <string name="submission_contact_title">"Richiedi il numero TAN"</string>
     <!-- XHED: Page headline for contact page in submission flow -->
     <string name="submission_contact_headline">"Come funziona:"</string>
     <!-- YTXT: Body text for contact page in submission flow-->
-    <string name="submission_contact_body">"Se vuoi richiedere un numero TAN tieni a portata di mano il risultato del test (se disponibile) e il tuo numero di telefono."</string>
     <!-- XBUT: submission contact call button -->
-    <string name="submission_contact_button_call">"Chiama."</string>
     <!-- XBUT: submission contact enter tan button -->
     <string name="submission_contact_button_enter">"Inserisci il numero TAN."</string>
     <!-- YTXT: Body text for step 1 of contact page -->
-    <string name="submission_contact_step_1_body">"Chiama il call center e richiedi il numero TAN:"</string>
     <!-- XLNK: Button / hyperlink to phone call for TAN contact page -->
     <string name="submission_contact_number_display">"080 1787"</string>
     <!-- XLNK: Technical number which is called when the user clicks on the display number -->
@@ -893,31 +909,21 @@
     <!-- XHED: Page title for the various submission status: unregistered -->
     <string name="submission_status_card_title_unregistered">"Sei stato testato?"</string>
     <!-- XHED: Page title for the various submission status: pending -->
-    <string name="submission_status_card_title_pending">"Il tuo risultato non è ancora disponibile."</string>
     <!-- XHED: Page title for the various submission status: available -->
-    <string name="submission_status_card_title_available">"Il tuo risultato è disponibile."</string>
     <!-- XHED: Page title for the various submission status: positive -->
     <string name="submission_status_card_title_positive">"Avvisa gli altri"</string>
     <!-- XHED: Subtitle for the submission status card: invalid -->
-    <string name="submission_status_card_subtitle_invalid">"Test non valido"</string>
     <!-- XHED: Subtitle for the submission status card: negative -->
-    <string name="submission_status_card_subtitle_negative">"Diagnosi negativa"</string>
     <!-- YTXT: Body text for submission status: fetching -->
-    <string name="submission_status_card_body_fetching">"Il tuo risultato è in fase di aggiornamento."</string>
     <!-- YTXT: Body text for submission status: unregistered -->
     <string name="submission_status_card_body_unregistered">"Informando gli altri aiuti a spezzare la catena di trasmissione delle infezioni."</string>
     <!-- YTXT: Body text for submission status: pending -->
-    <string name="submission_status_card_body_pending">"Il risultato del tuo test non è ancora pronto."</string>
     <!-- YTXT: Body text for submission status: invalid -->
-    <string name="submission_status_card_body_invalid">"È stato impossibile valutare il tuo test."</string>
     <!-- YTXT: Body text for submission status: positive -->
-    <string name="submission_status_card_body_positive">"Hai ricevuto una diagnosi positiva per l'infezione da virus SARS-CoV-2."</string>
     <!-- YTXT: Body text for submission status: negative -->
-    <string name="submission_status_card_body_negative">"Hai ricevuto una diagnosi negativa per l'infezione da virus SARS-CoV-2."</string>
     <!-- XBUT: submission status card unregistered button -->
     <string name="submission_status_card_button_unregistered">"Inserisci la conferma dell\'infezione"</string>
     <!-- XBUT: submission status card show results button -->
-    <string name="submission_status_card_button_show_results">"Mostra il test"</string>
     <!-- XHED: submission status card positive result subtitle -->
     <string name="submission_status_card_positive_result_subtitle">"Non dimenticare:"</string>
     <!-- YTXT: text for contagious card -->
@@ -934,13 +940,10 @@
     <!-- YTXT: registered at text -->
     <string name="test_result_card_registered_at_text">"Registrato su %s"</string>
     <!-- YTXT: negative status text -->
-    <string name="test_result_card_status_negative">"Negativo"</string>
     <!-- YTXT: positive status text -->
     <string name="test_result_card_status_positive">"Positivo"</string>
     <!-- YTXT: invalid status text -->
-    <string name="test_result_card_status_invalid">"Valutazione impossibile."</string>
     <!-- YTXT: pending status text -->
-    <string name="test_result_card_status_pending">"Il tuo risultato non è disponibile."</string>
     <!-- XHED: Title for further info of test result negative -->
     <string name="test_result_card_negative_further_info_title">"Altre informazioni:"</string>
     <!-- YTXT: Content for further info of test result negative -->
@@ -978,7 +981,9 @@
     <!-- XTXT: error dialog - detailed text if there is an error during external navigation / external action -->
     <string name="errors_external_action">"Questa azione non può essere eseguita. Chiama il Centro unico assistenza utenti."</string>
     <!-- XTXT: error dialog - phone still needs Google Play Services or Google Mobile Services update -->
-    <string name="errors_google_update_needed">"L'applicazione #OstaniZdrav è stata installata correttamente. Sfortunatamente, le notifiche sul rischio di esposizione SARS-CoV-2 non sono attualmente disponibili sul tuo dispositivo e non è possibile utilizzare l'applicazione #OstaniZdrav. Maggiori informazioni sono disponibili su: https://www.gov.si/it/argomenti/sars-cov-2/app-mobile-ostanizdrav/ \n "</string>
+    <string name="errors_google_update_needed">"L'applicazione #OstaniZdrav è stata installata correttamente. Sfortunatamente, le notifiche sul rischio di esposizione SARS-CoV-2 non sono attualmente disponibili sul tuo dispositivo e non è possibile utilizzare l'applicazione #OstaniZdrav. Maggiori informazioni sono disponibili su: https://www.gov.si/OstaniZdrav \n "</string>
+    <!-- XTXT: error dialog - either Google API Error (10) or reached request limit per day -->
+    <string name="errors_google_api_error">"The #OstaniZdrav App is running correctly, but we cannot update your current risk status. Exposure logging remains active and is working correctly. For further information, please see our FAQ page: https://www.coronawarn.app/en/faq/"</string>
 
     <!-- ####################################
                Generic Error Messages
@@ -1043,5 +1048,12 @@
     <string name="test_api_body_other_keys">"Other key"</string>
     <!-- NOTR -->
     <string name="test_api_calculate_risk_level">"Calculate Risk Level"</string>
+    <string name="submission_qr_code_scan_permission_rationale_dialog_headline">" "</string>
+    <string name="risk_details_additional_info_subtitle">Why your risk of infection is low</string>
+    <string name="risk_details_additional_info_title">Exposures with low risk</string>
+    <string name="risk_card_body_open_daily">Note: Please open the app daily to update your risk status.</string>
+    <string name="risk_details_additional_info_text">"You encountered a person who was later diagnosed with SARS-CoV-2. Nevertheless, based on your exposure logging data, your risk of infection is low. The risk is low if your encounter was brief or occurred at a distance. You do not need to worry and there is no specific need for action. We recommend that you adhere to the recommendations for prevention of the spread of SARS-CoV-2.  "</string>
+    <string name="risk_details_information_body_low_risk_with_encounter">The risk of infection is assessed locally on your device, using exposure logging data. The calculation also takes into account distance and duration of any exposure to persons diagnosed with SARS-CoV-2. Your risk of infection cannot be seen by or passed on to anyone else.</string>
+    <string name="submission_status_card_body_positive">Hai ricevuto una diagnosi positiva per l\'infezione da virus SARS-CoV-2.</string>
 
 </resources>
